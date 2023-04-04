@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./pexels-fox-1172675.jpg') no-repeat;
+    background-size: cover;
+}
+header {
+    position: fixed;
+    display: flex;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    z-index: 99;
+}
+nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 2rem;
+}
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    margin-top: 0.6rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav a::after {
+    content: '';
+    background: #fff;
+    left: 0;
+    bottom: 0.6rem;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 300ms;
+}
+nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.login-button {
+    background: transparent;
+    color: white;
+    border: 2px soild #777;
+    border-radius: 0.4rem;
+    width: 120px;
+    height: 45px;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-left: 2rem;
+    transition: 200ms ease-in;
+}
+.login-button:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(0.9rem);
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-box {
+    width: 100%;
+    padding: 4rem;
+}
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #162938;
+    margin: 20px;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0.2rem;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    transition: 400ms;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: 400ms;
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 42px;
+}
+.remember-forget {
+    width: 100%;
+    display: flex;
+    margin: -15px;
+    gap: 1.5rem;
+    color: #162938;
+}
+.remember-forget label {
+    display: flex;
+    gap: 0.3rem;
+}
+.remember-forget a {
+    text-decoration: none;
+    color: #162938;
+}
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+.button {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 2.3rem;
+    background: #162938;
+    border: none;
+    border-radius: 0.3rem;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+}
+.login-register {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #162938;
+    justify-content: center;
+}
+.login-register > p > a {
+    text-decoration: none;
+    color: #162938;
+    font-weight: 600;
+}
+.login-register > p > a:hover {
+    text-decoration: underline;
+}
